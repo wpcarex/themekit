@@ -1,0 +1,85 @@
+themekit:
+  config:
+    theme_name: ThemeKit
+    theme_version: 1.0.0
+    text_domain: themekit
+    load_composer: true
+    jquery_support: false
+    custom_fields: carbonfields
+
+  dir:
+    icon_dir: /dist/icons/
+    image_dir: /dist/images/
+
+  styles:
+    main: /build/styles.bundle.css
+
+  scripts:
+    main: /build/styles.bundle.js
+
+  sidebars:
+    primary:
+      name: Primary Sidebar
+      description: Primary Sidebar for the blog area.
+
+  menus:
+    primary:
+      location: primary
+      description: Hello there
+
+  post_types:
+    MyTestCPT:
+      labels:
+      name: Test
+      singular: Name
+      description: Test
+      hierarchical: false
+      exclude_from_search: false
+      publicly_queryable: true
+      show_ui: true
+      show_in_menu: true
+      show_in_nav_menus: true
+      show_in_admin_bar: true
+      public: true
+      has_archive: true
+      show_in_rest: true
+      menu_position: 1
+      menu_icon: dashboard-chart-pie
+      can_export: true
+      supports:
+        - title
+        - editor
+        - comments
+      rewrite:
+        slug: test
+
+  modules:
+    ExampleModule:
+      php:
+        - Shortcodes/Static/css/Test
+      javascripts:
+        - Shortcodes/Static/js/main.min.css
+      styles:
+        - Shortcodes/Static/css/main.min.css
+      rule:
+        bodyClass:
+          - examplemodule
+
+  include_files:
+    - src/Core/Config
+    - src/Core/Local
+    - src/Core/Templates
+    - src/Utils/Security
+    - src/Utils/Performance
+    - src/Core/Support
+    - src/Theme/Layouts/Layouts
+
+  services:
+    - Theme\Core\Templates
+    - Theme\Core\Local
+    - Theme\Setup\Widgets
+    - Theme\Setup\Assets
+    - Theme\Setup\NavMenus
+    - Theme\Utils\Performance
+    - Theme\Utils\Security
+    - Theme\Core\Layouts
