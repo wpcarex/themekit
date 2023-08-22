@@ -8,8 +8,8 @@ themekit:
     custom_fields: carbonfields
 
   dir:
-    icon_dir: /dist/icons/
-    image_dir: /dist/images/
+    icon_dir: /build/icons/
+    image_dir: /build/images/
 
   styles:
     main: /build/styles.bundle.css
@@ -73,6 +73,7 @@ themekit:
     - src/Utils/Performance
     - src/Core/Support
     - src/Theme/Layouts/Layouts
+    - src/Theme/Page/Page
 
   services:
     - Theme\Core\Templates
@@ -83,3 +84,4 @@ themekit:
     - Theme\Utils\Performance
     - Theme\Utils\Security
     - Theme\Core\Layouts
+    - Theme\Page\Page

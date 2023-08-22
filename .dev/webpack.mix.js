@@ -32,11 +32,11 @@ mix
 
 mix
 	.sass(
-		glb.src('src/Theme/**/Static/css/*.scss'),
+		glb.src('src/Theme/Main/Static/styles/**/*.s.scss'),
 		glb.out({
 			baseMap: '',
-			outMap: './static',
-			specifier: '',
+			outMap: './styles',
+			specifier: 's',
 		}),
 	);
 

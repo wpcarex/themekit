@@ -8,7 +8,7 @@ class Config {
 	 * Returns the current environment (prod|dev).
 	 */
 	public static function env() {
-		return ( defined( WP_ENVIRONMENT ) ) ? WP_ENVIRONMENT : '';
+		return ( defined( \WP_ENVIRONMENT ) ) ? \WP_ENVIRONMENT : '';
 	}
 
 	/**
