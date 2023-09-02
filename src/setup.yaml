@@ -15,7 +15,7 @@ themekit:
     main: /build/styles.bundle.css
 
   scripts:
-    main: /build/styles.bundle.js
+    main: /build/scripts.bundle.js
 
   sidebars:
     primary:
@@ -27,61 +27,24 @@ themekit:
       location: primary
       description: Hello there
 
-  post_types:
-    MyTestCPT:
-      labels:
-      name: Test
-      singular: Name
-      description: Test
-      hierarchical: false
-      exclude_from_search: false
-      publicly_queryable: true
-      show_ui: true
-      show_in_menu: true
-      show_in_nav_menus: true
-      show_in_admin_bar: true
-      public: true
-      has_archive: true
-      show_in_rest: true
-      menu_position: 1
-      menu_icon: dashboard-chart-pie
-      can_export: true
-      supports:
-        - title
-        - editor
-        - comments
-      rewrite:
-        slug: test
-
-  modules:
-    ExampleModule:
-      php:
-        - Shortcodes/Static/css/Test
-      javascripts:
-        - Shortcodes/Static/js/main.min.css
-      styles:
-        - Shortcodes/Static/css/main.min.css
-      rule:
-        bodyClass:
-          - examplemodule
-
   include_files:
     - src/Core/Config
     - src/Core/Local
-    - src/Core/Templates
+    - src/Core/Support
     - src/Utils/Security
     - src/Utils/Performance
-    - src/Core/Support
-    - src/Theme/Layouts/Layouts
-    - src/Theme/Page/Page
+    - src/Theme/Main/Controllers/Templates
+    - src/Theme/Layouts/Controllers/Layouts
+    - src/Theme/Page/Controllers/Page
 
   services:
-    - Theme\Core\Templates
-    - Theme\Core\Local
     - Theme\Setup\Widgets
     - Theme\Setup\Assets
     - Theme\Setup\NavMenus
+    - Theme\Core\Local
+    - Theme\Core\Support
     - Theme\Utils\Performance
     - Theme\Utils\Security
+    - Theme\Main\Templates
     - Theme\Core\Layouts
     - Theme\Page\Page

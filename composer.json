@@ -15,7 +15,7 @@
 	"require": {
 		"htmlburger/carbon-fields": "^3.3",
 		"vlucas/phpdotenv": "^5.5",
-		"symfony/yaml": "7.0.x-dev",
+		"symfony/yaml": "5.4.23",
 		"themekit/libs": "dev-main"
 	},
 	"require-dev": {

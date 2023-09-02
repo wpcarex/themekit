@@ -10,7 +10,7 @@
 
 use Theme\Kit;
 
-Kit::component( 'Page', 'header/header' );
+Kit::component( 'header/header' );
 ?>
 
 <div id="layout-<?php esc_attr_e( $layout_name ); ?>" class="flex items-center justify-center h-full h-screen max-w-6xl mx-auto">
@@ -20,4 +20,4 @@ Kit::component( 'Page', 'header/header' );
 </div>
 
 <?php
-Kit::component( 'Page', 'footer/footer' );
+Kit::component( 'footer/footer' );

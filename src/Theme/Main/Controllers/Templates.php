@@ -1,8 +1,9 @@
 <?php
 
-namespace Theme\Core;
+namespace Theme\Main;
 
 use Theme\Core\Registrable;
+use Theme\Core\Config;
 
 class Templates implements Registrable {
 
@@ -11,7 +12,7 @@ class Templates implements Registrable {
 		\add_filter( 'page_template', [ $this, 'register_template_paths' ] );
 
 		\add_filter( '404_template', [ $this, 'register_404_template' ] );
-		\add_filter( 'index_template', [ $this, 'register_index_template' ] );
+		\add_filter( 'home_template', [ $this, 'register_index_template' ] );
 	}
 
 	public static function templates() {

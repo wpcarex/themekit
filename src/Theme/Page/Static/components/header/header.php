@@ -8,6 +8,7 @@
  * @author themekit
  * @since   1.0.0
  */
+use Theme\Kit;
 
 ?>
 
@@ -15,7 +16,7 @@
 
 <html <?php language_attributes(); ?>>
 
-	<?php Theme\Kit::component( 'Page', 'header/head' ); ?>
+	<?php Kit::component( 'header/head' ); ?>
 
 	<body <?php body_class(); ?>>
 

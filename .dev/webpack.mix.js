@@ -72,7 +72,7 @@ mix
 				],
 			}),
 			new ImageminPlugin({
-				test: /\.(jpe?g|png|jpg|gif|svg)$/i,
+				test: /\.(jpe?g|png|jpg|gif)$/i,
 				plugins: [
 					imageminMozjpeg({
 						quality: 80,
@@ -91,7 +91,9 @@ mix
 		proxy: 'http://base.local',
 		open: 'external',
 		port: 3000,
-		files: ['*.php', 'src/**/**/*']
+		files: ['*.php', 'src/**/**/*'],
+		reloadDelay: 1000
+
 	});
 
 mix
