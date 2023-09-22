@@ -43,7 +43,6 @@ mix
 
 mix
 	.combine([
-		// 'resources/scripts/includes/*',
 		'src/Theme/Main/Static/scripts/main.js'
 	],
 		'build/scripts.bundle.js'
@@ -92,7 +91,7 @@ mix
 		open: 'external',
 		port: 3000,
 		files: ['*.php', 'src/**/**/*'],
-		reloadDelay: 1000
+		reloadDelay: 500
 
 	});
 
